@@ -4,8 +4,8 @@ trigger:
   branches:
     include:
       - develop
-	exclude:
-	  - release/xyz	
+    exclude:
+      - release/xyz	
   paths:
     exclude:
       - README.md
@@ -18,3 +18,14 @@ pr:
 pool: 
   name: linux-pool
 
+variables:
+
+
+parameters:
+- name: env
+  type: string
+  default: dev
+  values: 
+    - dev
+    - test
+    - stage
